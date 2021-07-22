@@ -1,4 +1,4 @@
-const ObjectId = require('mongodb').ObjectId;
+const { ObjectId } = require('mongodb');
 const createMongoClient = require('../shared/mongoClient');
 
 module.exports = async (context, req) => {

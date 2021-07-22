@@ -1,13 +1,37 @@
-module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+const { ObjectId } = require('mongodb');
+const createMongoClient = require('../shared/mongoClient');
 
-    const name = (req.query.name || (req.body && req.body.name));
-    const responseMessage = name
-        ? "Hello, " + name + ". This HTTP triggered function executed successfully."
-        : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
+module.exports = async (context, req) => {
+    const { id } = req.params;
+    const product = req.body || {};
 
-    context.res = {
-        // status: 200, /* Defaults to 200 */
-        body: responseMessage
-    };
-}
+    if (!id || !product) {
+        context.res = {
+            status: 400,
+            body: 'Provide a product and product id on params',
+        };
+        return;
+    }
+
+    const { client: MongoClient, closeConnectionFn } = await createMongoClient();
+    const Products = MongoClient.collection('products');
+
+    try {
+        const products = await Products.findOneAndUpdate(
+            { _id: ObjectId(id) },
+            { $set: product },
+        );
+        closeConnectionFn();
+
+        context.res = {
+            status: 200,
+            body: 'Product used successfully'
+        };
+
+    } catch (error) {
+        context.res = {
+            status: 500,
+            body: 'Error on insert product',
+        };
+    }
+};
