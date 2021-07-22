@@ -1,11 +1,13 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "azure-serverless",
+  "version": "1.0.0",
+  "description": "APIs para Gestão de Produtos utilizando Node.js",
   "scripts": {
     "test": "echo \"No tests yet...\""
   },
-  "author": "",
+  "repository": "https://github.com/lucasdealmeidadev/nodejs-serverless-api",
+  "author": "Lucas de Almeida Monteiro <lucasdealmeida.monteiro@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "mongodb": "^4.0.1"
   }
