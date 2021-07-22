@@ -1,7 +1,7 @@
 const ObjectId = require('mongodb').ObjectId;
 const createMongoClient = require('../shared/mongoClient');
 
-module.exports = async function (context, req) {
+module.exports = async (context, req) => {
     const { id } = req.params;
 
     if (!id) {
