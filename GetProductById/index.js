@@ -7,7 +7,7 @@ module.exports = async (context, req) => {
     if (!id) {
         context.res = {
             status: 400,
-            body: 'Provide a product id on params',
+            body: 'Provide a product id on params.',
         };
         return;
     }

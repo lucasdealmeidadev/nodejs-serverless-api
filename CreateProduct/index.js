@@ -6,7 +6,7 @@ module.exports = async (context, req) => {
     if (product) {
         context.res = {
             status: 400,
-            body: 'Product is required',
+            body: 'Product is required.',
         };
     }
 
@@ -18,12 +18,12 @@ module.exports = async (context, req) => {
         closeConnectionFn();
         context.res = { 
             status: 201,
-            body: 'Product registered successfully',
+            body: 'Product registered successfully.',
         };
     } catch (error) {
         context.res = {
             status: 500,
-            body: 'Error on insert product',
+            body: 'Error on insert product.',
         };
     }
 };

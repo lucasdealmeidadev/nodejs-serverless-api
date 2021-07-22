@@ -25,13 +25,13 @@ module.exports = async (context, req) => {
 
         context.res = {
             status: 200,
-            body: 'Product used successfully'
+            body: 'Product used successfully.'
         };
 
     } catch (error) {
         context.res = {
             status: 500,
-            body: 'Error on insert product',
+            body: 'Error updating product.',
         };
     }
 };
