@@ -44,7 +44,7 @@ A próxima etapa, será iniciar o servidor para disponibilizar as APIs, utilizan
 Após a serverless API ser inicializada, será disponibilizado as rotas de serviços, como demostrado abaixo:
 
 ```
->  CreateProduct: [POST] http://localhost:7071/api/products
+> CreateProduct: [POST] http://localhost:7071/api/products
 
 > DeleteProduct: [DELETE] http://localhost:7071/api/products/{id}
 
