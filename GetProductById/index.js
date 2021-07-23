@@ -14,7 +14,7 @@ module.exports = async (context, req) => {
 
     const { client: MongoClient, closeConnectionFn } = await createMongoClient();
     const Products = MongoClient.collection('products');
-    const body = await Products.findOne({ '_id': ObjectId(id) });
+    const body = await Products.findOne({ _id: ObjectId(id) });
 
     closeConnectionFn();
 
