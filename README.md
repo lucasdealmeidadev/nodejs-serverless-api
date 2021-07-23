@@ -1,12 +1,23 @@
 # Azure Serverless API
 
+## 🚀 Recursos utilizados
+
+* **[Azure Functions](https://azure.microsoft.com/pt-br/services/functions/)**
+* **[MongoDB](https://github.com/mongodb/node-mongodb-native)**
+* **[Node.Js](https://nodejs.org/en/)**
+
+
+## 🔥 Executando a aplicação no ambiente local
+
+Caso você deseja executar o projeto na sua máquina local, basta seguir os passos abaixo:
+
 ### 🌀 Começando... 
 
 Para começar, você deve simplesmente clonar o repositório do projeto na sua máquina e instalar as dependências.
 
 #### ❗️ Instalando as dependências (via Windows): 
 
-Abre o cmd (caso esteja utilizando o Windows) navegue até o local onde você clonou o projeto
+Abre o cmd (caso esteja utilizando o Windows) navegue até o local onde você clonou o projeto.
 
 ```
 cd "C:\Users\NomeDoComputador\Documents\cloneprojeto"
@@ -29,13 +40,13 @@ Para efetuar o procedimento de instalação, será necessário acessar o link ab
 
 #### 💨 Executando a aplicação 
 
-Após finalizar a instalação das ferramentas de desenvolvimento da Azure Functions, navegue até o local onde você clonou o projeto.
+Ao finalizar a instalação das ferramentas de desenvolvimento da Azure Functions, navegue até o local onde você clonou o projeto.
 
 ```
 cd "C:\Users\NomeDoComputador\Documents\cloneprojeto"
 ```
 
-A próxima etapa, será iniciar o servidor para disponibilizar as APIs, utilizando o comando abaixo no terminal:
+A próxima etapa, será iniciar o servidor para disponibilizar as APIs, utilizando o seguinte comando no terminal:
 
 ```
 > func host start
