@@ -7,9 +7,5 @@ module.exports = async context => {
     const body = await res.toArray();
 
     closeConnectionFn();
-    
-    context.res = {
-        status: 200,
-        body
-    };
+    context.res = { status: 200, body };
 };

@@ -1,13 +1,17 @@
-module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+const axios = require('axios');
 
-    const name = (req.query.name || (req.body && req.body.name));
-    const responseMessage = name
-        ? "Hello, " + name + ". This HTTP triggered function executed successfully."
-        : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
+module.exports = async (context, req) => {
+    const { cep } = req.params;
 
-    context.res = {
-        // status: 200, /* Defaults to 200 */
-        body: responseMessage
-    };
+    if (!cep) {
+        context.res = { status: 400, body: 'Provide a cep on params.'};
+        return;
+    }
+
+    try {
+        const response = await axios.get(`https://viacep.com.br/ws/${cep}/json`);
+        context.res = { status: 200, body: response.data };
+    } catch (error) {
+        context.res = { status: 400, body: error };
+    }
 }

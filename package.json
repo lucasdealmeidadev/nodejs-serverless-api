@@ -9,6 +9,7 @@
   "author": "Lucas de Almeida Monteiro <lucasdealmeida.monteiro@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
     "mongodb": "^4.0.1"
   }
 }

@@ -5,10 +5,7 @@ module.exports = async (context, req) => {
     const { id } = req.params;
 
     if (!id) {
-        context.res = {
-            status: 400,
-            body: 'Provide a product id on params',
-        };
+        context.res = { status: 400, body: 'Provide a product id on params' };
         return;
     }
 
@@ -17,15 +14,10 @@ module.exports = async (context, req) => {
 
     try {
         await Products.findOneAndDelete({ _id: ObjectId(id) });
+
         closeConnectionFn();
-        context.res = {
-            status: 200,
-            body: 'Product deleted successfully!',
-        };
+        context.res = { status: 200, body: 'Product deleted successfully.', };
     } catch (error) {
-        context.res = {
-            status: 500,
-            body: 'Error on delete product ' + id,
-        };
+        context.res = { status: 500, body: `Error on delete product ${id}.`};
     }
 };
