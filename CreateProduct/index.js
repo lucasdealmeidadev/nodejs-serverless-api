@@ -5,6 +5,7 @@ module.exports = async (context, req) => {
 
     if (product) {
         context.res = { status: 400, body: 'Product is required.' };
+        return;
     }
 
     const { client: MongoClient, closeConnectionFn } = await createMongoClient();
