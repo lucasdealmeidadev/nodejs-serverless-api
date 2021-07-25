@@ -1,7 +1,7 @@
 # Azure Serverless API
 
 <p align="center">
-![Preview](https://github.com/lucasdealmeidadev/nodejs-serverless-api/blob/main/azure.png?raw=true)
+    <img src="https://github.com/lucasdealmeidadev/nodejs-serverless-api/blob/main/azure.png">
 </p>
 
 Construindo sexy APIs usando arquitetura serverless. Esse projeto foi uma ampliação da aula ministrada por **Igor Halfeld** na **Digital Innovation One**.
