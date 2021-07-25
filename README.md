@@ -1,10 +1,19 @@
 # Azure Serverless API
 
+![Preview](https://github.com/lucasdealmeidadev/nodejs-serverless-api/blob/main/azure.png?raw=true)
+
+Construindo sexy APIs usando arquitetura serverless. Esse projeto foi uma ampliação da aula ministrada por **Igor Halfeld** na **Digital Innovation One**.
+
+Foram adicionados os seguintes recursos ao projeto: 
+- API para pesquisa de endereço via CEP, utilizando o cliente HTTP **Axios** para realizar as requisições realizadas ao Webservice da **ViaCep**.
+
 ## 🚀 Recursos utilizados
 
 * **[Azure Functions](https://azure.microsoft.com/pt-br/services/functions/)**
+* **[Axios](https://axios-http.com/docs/intro)**
 * **[MongoDB](https://github.com/mongodb/node-mongodb-native)**
 * **[Node.Js](https://nodejs.org/en/)**
+* **[ViaCep](https://viacep.com.br/)**
 
 
 ## 🔥 Executando a aplicação no ambiente local
@@ -55,6 +64,8 @@ A próxima etapa, será iniciar o servidor para disponibilizar as APIs, utilizan
 Após a serverless API ser inicializada, será disponibilizado as rotas de serviços, como demostrado abaixo:
 
 ```
+> BuscaCep: [GET] http://localhost:7071/api/busca-cep/{cep}
+
 > CreateProduct: [POST] http://localhost:7071/api/products
 
 > DeleteProduct: [DELETE] http://localhost:7071/api/products/{id}
@@ -69,7 +80,8 @@ Após a serverless API ser inicializada, será disponibilizado as rotas de servi
 ### Dependencias
 Não será necessário instalar essas dependências caso você tenha efetuado o clone e as etapas descrito acima. 
 ```
-npm i mongodb
+npm install mongodb
+npm install axios
 ```
 
 ## 🚩 Tenho dúvidas... O que fazer? 
