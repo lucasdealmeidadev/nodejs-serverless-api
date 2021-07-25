@@ -7,7 +7,7 @@
 Construindo sexy APIs usando arquitetura serverless. Esse projeto foi uma ampliação da aula ministrada por **Igor Halfeld** na **Digital Innovation One**.
 
 Foram adicionados os seguintes recursos ao projeto: 
-- API para pesquisa de endereço via CEP, utilizando o cliente HTTP **Axios** para realizar as requisições realizadas ao Webservice da **ViaCep**.
+- API para pesquisa de endereço via CEP, utilizando o cliente HTTP **Axios**, para realizar as requisições ao Webservice da **ViaCep**.
 
 ## 🚀 Recursos utilizados
 
